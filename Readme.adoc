@@ -1,0 +1,23 @@
+# Spring Data JPA Example
+
+This project is a basic example of using Spring Data JPA to manage a list of users. The application demonstrates how to create an entity, repository, service, and REST controller using Spring Boot.
+
+## Getting Started
+
+### Prerequisites
+
+- Java Development Kit (JDK) 23 or higher
+- Maven
+- Your favorite IDE (e.g., IntelliJ IDEA, Eclipse)
+
+### Installation
+
+1. Clone the repository:
+git clone https://github.com/manchalaraghunandan/First_Project.git[repo_link]
+
+2. Build the project using below command:
+```bash
+mvn clean install
+```
+
+
