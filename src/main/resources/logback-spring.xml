@@ -1,0 +1,26 @@
+<configuration scan="true" scanPeriod="30 seconds" debug="false">
+    <property name="LOG_FILE" value="${LOG_FILE:-/var/log/firstproject/application.log}" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_FILE}</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <logger name="org.springframework" level="WARN" />
+    <logger name="org.example" level="DEBUG" />
+    <logger name="com.example.anotherpackage" level="ERROR" />
+</configuration>

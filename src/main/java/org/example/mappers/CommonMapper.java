@@ -6,7 +6,7 @@ import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
-@Mapper(injectionStrategy = InjectionStrategy.SETTER, unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(injectionStrategy = InjectionStrategy.CONSTRUCTOR, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface CommonMapper {
 
     UserDto toUserDto(UserEntity userEntity);
